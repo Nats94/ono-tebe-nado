@@ -14,12 +14,12 @@ body {
 }
 
 .contener {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-content: space-around;
-    padding: 93px 51px 92px 51px;
-    align-content: center;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: space-around;
+  padding: 93px 51px 92px 51px;
+  align-content: center;
+}
 
 .header_menu_list_menu {
   font-size: 18px;
@@ -281,8 +281,8 @@ article {
   font-weight: 400;
 }
 
-.about__text_article{
-    margin-top: 15px;
+.about__text_article {
+  margin-top: 15px;
 }
 
 .footer {
