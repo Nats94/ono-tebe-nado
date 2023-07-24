@@ -13,17 +13,6 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-/* .contener {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  font-size: 18px;
-  line-height: 24.3px;
-  margin-left: 50px;
-  margin-right: 50px;
-} */
-
 .contener {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -85,11 +74,8 @@ address {
 .cover {
   background-image: url(../img/lotus-flower.png);
   background-repeat: no-repeat;
-  /* background-position: 100% 100%; */
   margin-bottom: 180px;
   margin-top: 0;
-  /* padding-top: 165px;
-  padding-bottom: 50px; */
 }
 
 .cover__title {
@@ -293,7 +279,10 @@ article {
   grid-row-end: 5;
   font-size: 20px;
   font-weight: 400;
-  text-align: justify;
+}
+
+.about__text_article{
+    margin-top: 15px;
 }
 
 .footer {
