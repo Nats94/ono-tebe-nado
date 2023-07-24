@@ -10,7 +10,7 @@ body {
   width: 100%;
   font-family: "Raleway", sans-serif;
   background-color: white;
-  margin: auto;
+  margin: 0 auto;
   padding-top: 92px;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .header__logo {
-  margin-right: 100px;
+  margin-right: 140px;
 }
 
 .address {
@@ -75,7 +75,7 @@ address {
 }
 
 .cover {
-  background-image: url(img/lotus-flower.png);
+  background-image: url();
   background-repeat: no-repeat;
   background-position: 100% 100%;
   margin-bottom: 180px;
