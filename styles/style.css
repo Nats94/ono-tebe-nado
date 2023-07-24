@@ -11,10 +11,9 @@ body {
   width: 1440px;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  padding-top: 92px;
 }
 
-.contener {
+/* .contener {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -23,7 +22,15 @@ body {
   line-height: 24.3px;
   margin-left: 50px;
   margin-right: 50px;
-}
+} */
+
+.contener {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: space-around;
+    padding: 93px 51px 92px 51px;
+    align-content: center;
+  }
 
 .header_menu_list_menu {
   font-size: 18px;
@@ -31,7 +38,6 @@ body {
   display: flex;
   flex-direction: row;
   list-style: circle;
-  margin-left: 13px;
   padding: 0;
 }
 
@@ -47,12 +53,14 @@ body {
 }
 
 .header__logo {
-  margin-right: 140px;
+  display: block;
+  justify-self: center;
 }
 
 .address {
   font-style: normal;
   flex-direction: column;
+  justify-self: end;
   row-gap: 5px;
   display: block;
   text-decoration: none;
@@ -79,6 +87,7 @@ address {
   background-repeat: no-repeat;
   background-position: 100% 100%;
   margin-bottom: 180px;
+  margin-top: 0;
 }
 
 .cover__title {
