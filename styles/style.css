@@ -1,24 +1,8 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  min-width: 1100px;
-  width: 1440px;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-}
-
 .contener {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: space-around;
-  padding: 93px 51px 0 51px; 
-  /* align-content: center; */
+  padding: 93px 51px 40px 51px;
 }
 
 .header_menu_list_menu {
@@ -27,17 +11,21 @@ body {
   display: flex;
   flex-direction: row;
   list-style: circle;
-  padding: 0;
+  padding-top: 26px;
 }
 
 .header_menu_list_menu_items {
   margin: 20px;
   text-decoration: underline;
-  /* padding: 10px; */
+}
+
+.header_menu_list_menu_items:first-child {
+  list-style: none;
+  text-decoration: none;
+  margin-left: 0;
 }
 
 .header_menu_list_menu_items:hover {
-  list-style: none;
   text-decoration: none;
 }
 
@@ -53,7 +41,9 @@ body {
   row-gap: 5px;
   display: block;
   text-decoration: none;
-   width: 240px; 
+  width: 240px;
+  padding-top: 7px;
+  line-height: 24.3px;
 }
 
 .header__links-list {
@@ -66,18 +56,13 @@ body {
   color: black;
 }
 
-address {
-  font-style: normal;
-  margin: 0;
-}
-
 .cover {
-  background-image: url(../img/lotus-flower.png);
+  background-image: url(../images/lotus-flower.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 757px;
   margin-bottom: 180px;
-  margin-top: 0;
 }
 
 .cover__title {
@@ -92,12 +77,12 @@ address {
   margin: 50px 20px 50px 20px;
   text-transform: uppercase;
   font-weight: 700;
-  gap: 78px;
-  margin-bottom: 147px;
+  gap: 30px;
 }
 
 .cover_title_first {
-   margin-top: 165px;
+  margin-top: 165px;
+  margin-left: 25px;
   justify-self: flex-start;
   align-self: flex-start;
 }
@@ -105,7 +90,7 @@ address {
 .cover_title_last {
   justify-self: flex-end;
   align-self: flex-end;
-
+  margin-bottom: 35px;
 }
 
 .cover__description {
@@ -118,10 +103,9 @@ address {
   color: #fff;
   text-align: center;
   font-size: 22px;
-  font-weight: 100;
   text-transform: uppercase;
-  word-spacing: 10px;
-  margin-top: 15px;
+  word-spacing: 14px;
+  letter-spacing: 0.5px;
 }
 
 .cover__description__button {
@@ -131,8 +115,7 @@ address {
   width: 257px;
   height: 52px;
   margin-right: 50px;
-  margin-left: 110px;
-  margin-bottom: 50px;
+  margin-left: 78px;
 }
 
 .button__text {
@@ -144,9 +127,11 @@ address {
 }
 
 .lots__heading {
+  margin-top: 160px;
   margin-left: 90px;
   text-transform: uppercase;
   margin-bottom: 27px;
+  font-size: 40px;
 }
 
 .card {
@@ -158,27 +143,34 @@ address {
 }
 
 article {
-  width: 430px;
-  height: 450px;
   color: white;
 }
 
 .card_type_film {
-  background-image: url(../img/photo_andersson.png);
+  background-image: url(../images/photo_andersson.png);
   background-position: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 430px;
+  color: white;
+}
+
+.card_type_book {
+  background-image: url(../images/photo_uilis.png);
+  background-position: 100% 100%;
+  width: 430px;
+  color: white;
   display: flex;
   flex-direction: column;
   align-content: space-between;
 }
 
-.card_type_book {
-  background-image: url(../img/photo_uilis.png);
-  background-position: 100% 100%;
-}
-
 .card_type_picture {
-  background-image: url(../img/photo_kandidsky.png);
+  background-image: url(../images/photo_kandidsky.png);
   background-position: 100% 100%;
+  width: 430px;
+  color: white;
 }
 
 .lots_description {
@@ -206,6 +198,7 @@ article {
   font-size: 20px;
   font-weight: 200;
   line-height: 120%;
+  letter-spacing: 0.5px;
 }
 
 .overlay {
@@ -216,10 +209,12 @@ article {
 
 .lots__look-more-link {
   margin-top: 30px;
-  margin-left: 40px;
+  margin-left: 100px;
   font-size: 20px;
+  line-height: normal;
   text-transform: lowercase;
   text-decoration: underline;
+  font-weight: 100;
 }
 
 .about {
@@ -231,6 +226,7 @@ article {
   margin-top: 180px;
   margin-left: 50px;
   margin-right: 50px;
+  margin-bottom: 180px;
 }
 
 .about__logo {
@@ -239,12 +235,13 @@ article {
   grid-row-start: 2;
   grid-row-end: 3;
   justify-self: center;
-  align-content: center;
   width: 240px;
   height: 240px;
   border: 5px solid black;
   border-radius: 50%;
   background-color: black;
+  margin-top: -80px;
+  margin-left: 25px;
 }
 
 .about__logo-image-box {
@@ -275,20 +272,23 @@ article {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
 .about__text {
-  margin-right: 100px;
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 4;
   grid-row-end: 5;
   font-size: 20px;
+  line-height: normal;
   font-weight: 400;
+  margin-left: 15px;
 }
 
 .about__text_article {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .footer {
@@ -296,6 +296,7 @@ article {
   flex-direction: row;
   justify-content: space-between;
   margin: 180px 50px 90px 50px;
+  padding-top: 85px;
 }
 
 .footer__menu-list {
@@ -308,18 +309,11 @@ article {
 .footer__social-list {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  justify-self: end;
+  gap: 48px;
 }
 
 .footer__social-list-item {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  text-decoration: underline;
+  margin-right: 0;
 }
