@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-content: space-around;
-  padding: 93px 51px 40px 51px;
+  padding: 93px 0 40px 51px;
 }
 
 .header_menu_list_menu {
@@ -19,14 +19,10 @@
   text-decoration: underline;
 }
 
-.header_menu_list_menu_items:first-child {
+.header__link_active {
   list-style: none;
   text-decoration: none;
   margin-left: 0;
-}
-
-.header_menu_list_menu_items:hover {
-  text-decoration: none;
 }
 
 .header__logo {
@@ -41,14 +37,13 @@
   row-gap: 5px;
   display: block;
   text-decoration: none;
-  width: 240px;
+  max-width: 240px;
   padding-top: 7px;
   line-height: 24.3px;
-}
-
-.header__links-list {
-  flex-direction: column;
-  justify-self: flex-end;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24.3px;
 }
 
 .header_address {
@@ -57,16 +52,14 @@
 }
 
 .cover {
-  background-image: url(../images/lotus-flower.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 757px;
-  margin-bottom: 180px;
+  background: url(../images/lotus-flower.png) no-repeat center/cover;
+  max-width: 1440px;
+  margin: 0;
 }
 
 .cover__title {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -77,7 +70,7 @@
   margin: 50px 20px 50px 20px;
   text-transform: uppercase;
   font-weight: 700;
-  gap: 30px;
+  gap: 10px;
 }
 
 .cover_title_first {
@@ -90,7 +83,7 @@
 .cover_title_last {
   justify-self: flex-end;
   align-self: flex-end;
-  margin-bottom: 35px;
+  margin-bottom: 65px;
 }
 
 .cover__description {
@@ -116,61 +109,50 @@
   height: 52px;
   margin-right: 50px;
   margin-left: 78px;
-}
-
-.button__text {
-  color: #fff;
+  margin-bottom: 62px;
+  font-family: Raleway;
   font-size: 22px;
-  font-weight: 100;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   text-transform: uppercase;
-  word-spacing: 10px;
+  color: #fff;
 }
 
 .lots__heading {
-  margin-top: 160px;
+  margin-top: 180px;
   margin-left: 90px;
   text-transform: uppercase;
   margin-bottom: 27px;
   font-size: 40px;
 }
 
-.card {
+.lots__card-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
   margin-left: 50px;
   margin-right: 50px;
 }
 
-article {
+.card {
+  background-position: 100% 100%;
+  width: 430px;
+  height: 450px;
   color: white;
 }
 
 .card_type_film {
   background-image: url(../images/photo_andersson.png);
-  background-position: 100% 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  width: 430px;
-  color: white;
 }
 
 .card_type_book {
   background-image: url(../images/photo_uilis.png);
-  background-position: 100% 100%;
-  width: 430px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
 }
 
 .card_type_picture {
   background-image: url(../images/photo_kandidsky.png);
-  background-position: 100% 100%;
-  width: 430px;
-  color: white;
 }
 
 .lots_description {
@@ -178,6 +160,7 @@ article {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  font-family: Raleway;
 }
 
 .card__title {
@@ -196,9 +179,9 @@ article {
   margin-left: 40px;
   margin-right: 40px;
   font-size: 20px;
-  font-weight: 200;
+  font-style: normal;
+  font-weight: 400;
   line-height: 120%;
-  letter-spacing: 0.5px;
 }
 
 .overlay {
@@ -214,7 +197,6 @@ article {
   line-height: normal;
   text-transform: lowercase;
   text-decoration: underline;
-  font-weight: 100;
 }
 
 .about {
@@ -223,7 +205,7 @@ article {
   grid-template-rows: repeat(5, 20%);
   justify-content: center;
   align-content: center;
-  margin-top: 180px;
+  margin-top: 170px;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 180px;
@@ -237,7 +219,6 @@ article {
   justify-self: center;
   width: 240px;
   height: 240px;
-  border: 5px solid black;
   border-radius: 50%;
   background-color: black;
   margin-top: -80px;
@@ -272,7 +253,6 @@ article {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 15px;
   margin-left: 15px;
 }
 
@@ -285,17 +265,16 @@ article {
   line-height: normal;
   font-weight: 400;
   margin-left: 15px;
-}
-
-.about__text_article {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 180px 50px 90px 50px;
+  margin: 150px 50px 90px 50px;
   padding-top: 85px;
 }
 
@@ -303,7 +282,21 @@ article {
   display: flex;
   flex-direction: column;
   text-align: center;
+
+}
+
+.footer__menu-items {
   list-style: none;
+  text-transform: lowercase;
+  text-decoration: underline;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.foter__link_active {
+  text-decoration: none;
 }
 
 .footer__social-list {
