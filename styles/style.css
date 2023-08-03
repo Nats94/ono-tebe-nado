@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   align-content: space-around;
   padding: 93px 0 40px 51px;
+  margin-right: 50px;
 }
 
 .header_menu_list_menu {
@@ -17,11 +18,15 @@
 .header_menu_list_menu_items {
   margin: 20px;
   text-decoration: underline;
+  text-underline-position: under;
 }
 
 .header__link_active {
-  list-style: none;
   text-decoration: none;
+}
+
+.header_menu_list_menu_items:first-child {
+  list-style: none;
   margin-left: 0;
 }
 
@@ -31,11 +36,10 @@
 }
 
 .address {
+  display: flex;
   font-style: normal;
   flex-direction: column;
   justify-self: end;
-  row-gap: 5px;
-  display: block;
   text-decoration: none;
   max-width: 240px;
   padding-top: 7px;
@@ -46,13 +50,14 @@
 
 .header_address {
   text-decoration: underline;
+  text-underline-position: under;
   color: black;
 }
 
 .cover {
   background: url(../images/lotus-flower.png) no-repeat center/cover;
-  max-width: 1440px;
   margin: 0;
+  position: relative;
 }
 
 .cover__title {
@@ -63,7 +68,7 @@
   position: relative;
   align-items: center;
   font-size: 100px;
-  letter-spacing: 40px;
+  letter-spacing: 30px;
   color: white;
   margin: 50px 20px 50px 20px;
   text-transform: uppercase;
@@ -71,23 +76,29 @@
   gap: 10px;
 }
 
-.cover_title_first {
+.aligned-text {
   margin-top: 165px;
   margin-left: 25px;
   justify-self: flex-start;
   align-self: flex-start;
 }
 
-.cover_title_last {
+.aligned-text_right {
   justify-self: flex-end;
   align-self: flex-end;
   margin-bottom: 65px;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 60px;
 }
 
 .cover__description {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  position: relative;
+  z-index: 1;
 }
 
 .cover__description__text {
@@ -97,6 +108,7 @@
   text-transform: uppercase;
   word-spacing: 14px;
   letter-spacing: 0.5px;
+  margin-top: 15px;
 }
 
 .cover__description__button {
@@ -118,7 +130,7 @@
 }
 
 .lots__heading {
-  margin-top: 180px;
+  margin-top: 170px;
   margin-left: 90px;
   text-transform: uppercase;
   margin-bottom: 27px;
@@ -134,11 +146,23 @@
   margin-right: 50px;
 }
 
+.lots__card-list-item {
+  flex-grow: 1;
+  flex-basis: 430px;
+}
+
 .card {
-  background-position: 100% 100%;
-  width: 430px;
-  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-family: Raleway;
+  position: relative;
 }
 
 .card_type_film {
@@ -153,14 +177,6 @@
   background-image: url(../images/photo_kandidsky.png);
 }
 
-.lots_description {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  font-family: Raleway;
-}
-
 .card__title {
   margin-top: 50px;
   margin-left: 40px;
@@ -170,6 +186,7 @@
   line-height: 120%;
   text-decoration: underline;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .card__text {
@@ -180,47 +197,49 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  z-index: 1;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 0;
 }
 
 .lots__look-more-link {
-  margin-top: 30px;
-  margin-left: 100px;
+  margin-top: 35px;
+  margin-left: 90px;
   font-size: 20px;
   line-height: normal;
   text-transform: lowercase;
   text-decoration: underline;
+  text-underline-position: under;
 }
 
 .about {
   display: grid;
-  grid-template-columns: repeat(3, 35%);
-  grid-template-rows: repeat(5, 20%);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-content: center;
-  margin-top: 170px;
+  margin-top: 180px;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 180px;
+  column-gap: 25px;
 }
 
 .about__logo {
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
   justify-self: center;
   width: 240px;
   height: 240px;
   border-radius: 50%;
   background-color: black;
-  margin-top: -80px;
-  margin-left: 25px;
 }
 
 .about__logo-image-box {
@@ -231,62 +250,55 @@
 }
 
 .about__logo-image {
-  width: 70%;
+  width: 60%;
   height: auto;
-}
-
-.about__column {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
 }
 
 .about__title {
   align-self: center;
   grid-column-start: 2;
   grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-left: 15px;
 }
 
 .about__text {
+  margin-top: 5px;
   grid-column-start: 2;
   grid-column-end: 4;
-  grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
   font-size: 20px;
   line-height: normal;
   font-weight: 400;
-  margin-left: 15px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 28px;
 }
 
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 150px 50px 90px 50px;
-  padding-top: 85px;
+  margin-top: 180px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .footer__menu-list {
   display: flex;
   flex-direction: column;
   text-align: center;
-
 }
 
 .footer__menu-items {
   list-style: none;
   text-transform: lowercase;
   text-decoration: underline;
+  text-underline-position: under;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
